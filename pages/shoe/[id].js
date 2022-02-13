@@ -11,10 +11,10 @@ const fetcher = async (url) => {
   return data
 }
 
-export default function Person() {
+export default function Shoe() {
   const { query } = useRouter()
   const { data, error } = useSWR(
-    () => query.id && `/api/people/${query.id}`,
+    () => query.id && `/api/shoes/${query.id}`,
     fetcher
   )
 
@@ -23,25 +23,12 @@ export default function Person() {
 
   return (
     <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Height</th>
-          <th>Mass</th>
-          <th>Hair color</th>
-          <th>Skin color</th>
-          <th>Eye color</th>
-          <th>Gender</th>
-        </tr>
-      </thead>
       <tbody>
         <tr>
           <td>{data.name}</td>
-          <td>{data.height}</td>
-          <td>{data.mass}</td>
-          <td>{data.hair_color}</td>
-          <td>{data.skin_color}</td>
-          <td>{data.eye_color}</td>
+          <td>{data.sizes}</td>
+          <td>{data.colors}</td>
+          <td>{data.id}</td>
           <td>{data.gender}</td>
         </tr>
       </tbody>

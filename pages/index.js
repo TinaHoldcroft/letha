@@ -1,12 +1,12 @@
 import Head from 'next/head'
 import useSWR from 'swr'
-import Person from '../components/Person'
+import Shoe from '../components/shoe'
 import WizardForm from './WizardForm/index'
 
 const fetcher = (url) => fetch(url).then((res) => res.json())
 
 export default function Home() {
-    const { data, error } = useSWR('/api/people', fetcher)
+    const { data, error } = useSWR('/api/shoes', fetcher)
 
     if (error) return <div>Failed to load</div>
     if (!data) return <div>Loading...</div>
@@ -22,7 +22,7 @@ export default function Home() {
                 <WizardForm/>
                 <div>
                     {data.map((p, i) => (
-                        <Person key={i} person={p} />
+                        <Shoe key={i} shoe={p} />
                     ))}
                 </div>
             </>
