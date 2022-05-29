@@ -1,13 +1,20 @@
+import Link from "next/link";
 
-import Mode from './constants/Mode'
-import Language from './constants/Language'
 
 const Nav = () => {
 
     return (
         <nav>
-            <Mode />
-            <Language/>
+            <Link href='/'>Sneakers</Link>
+            <Link href='/'>Pumps</Link>
+            <Link passHref href='/'>
+                <a className='logo'>
+                    <div>Letha</div>
+                    <div>Footwear</div>
+                </a>
+            </Link>
+            <Link href='/'>Boots</Link>
+            <Link href='/'>Sandals</Link>
         </nav>
     )
 }

@@ -11,11 +11,6 @@ html,
 body {
     scroll-behavior: smooth;
 }
-[light] body {
-    background-color: $white;
-    color: $black;
-}
-[dark] body {
-    background-color: $black;
-    color: $white;
+body {
+    background-color: #E7E8EA;
 }

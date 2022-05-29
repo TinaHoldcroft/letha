@@ -1,0 +1,11 @@
+header {
+    @include flex(column nowrap, center, center, center, center, 0);
+
+}
+.hero-img {
+    position: relative;
+    top: -6.5rem; //height of nav
+    margin-top: -3rem;
+    width: 80%;
+    z-index: -9999;
+}

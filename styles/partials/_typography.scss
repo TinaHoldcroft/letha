@@ -1,10 +1,16 @@
-[light] {
-    a {
-        color: $black;
-    }
-}
-[dark] body {
-    a {
-        color: $white;
+@import url("https://use.typekit.net/wyk7nwi.css");
+//font-family: source-code-pro, monospace;
+//font-family: roboto, sans-serif;
+//font-family: roboto-condensed, sans-serif;
+//font-family: roboto-mono, monospace;
+
+a {
+    font-family: roboto, sans-serif;
+    letter-spacing: 0.1em;
+    color: $black;
+    text-decoration: none;
+    &:hover, &:focus {
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
     }
 }

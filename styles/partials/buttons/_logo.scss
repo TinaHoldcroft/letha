@@ -1,0 +1,20 @@
+.logo {
+    @include flex(column nowrap, center, center, center, center, 0);
+    div {
+        line-height: 1.15em;
+        &:nth-of-type(1) {
+            font-family: source-code-pro, monospace;
+            font-weight: 500;
+            font-size: 2em;
+        }
+        &:nth-of-type(2) {
+            text-transform: uppercase;
+            font-family: roboto, sans-serif;
+            letter-spacing: 0.22em;
+            font-size: 0.92em;
+        }
+    }
+    &:hover, &:focus-within {
+        text-decoration: none;
+    }
+}

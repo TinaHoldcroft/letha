@@ -19,7 +19,10 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <>
-                <WizardForm/>
+                <header>
+                    <img className='hero-img' src='https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1131&q=80' alt='' />
+                </header>
+                <WizardForm />
                 <div>
                     {data.map((p, i) => (
                         <Shoe key={i} shoe={p} />
